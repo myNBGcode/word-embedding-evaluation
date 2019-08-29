@@ -1,4 +1,4 @@
-# Python script to evaluate a word embedding
+# Word embedding evaluator
 
 This script takes as input:
  - The file containing word embedding vectors 
