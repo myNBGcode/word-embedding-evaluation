@@ -187,4 +187,4 @@ history = model.fit(X, y,
           epochs=TRAINING_EPOCHS)
 
 # the 100-top-bounded score based on min loss
-print("Score: ", 100 - min(history.history['loss'])*10)
+print("Score: ", 100 - min(history.history['loss'])*100)
