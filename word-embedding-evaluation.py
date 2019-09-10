@@ -40,7 +40,7 @@ word_index = {}
 i=0
 with open(vector_list_path,'r') as f:
     for line in f:
-        values = line.replace('[','').replace(']','').split()
+        values = line.replace('[','').replace(']','').replace(', ',' ').split()
         coefs.append(np.asarray(values[0:], dtype='float32'))
         i+=1
 
