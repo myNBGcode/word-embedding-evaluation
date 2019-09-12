@@ -97,7 +97,7 @@ unknown_end = 0
 for word in contents.split():
     word = word.replace(',','')
     if word.endswith('.'):
-        word = word[:1]
+        word = word[:-1]
         end_of_sentence = 1
     
     # if the word is a known token 
