@@ -107,7 +107,7 @@ for word in contents.split():
         represented += 1
         
         # keep an index of the end of sentences as we need to avoid training to predict the first of a new sentence
-        if end_of_sentence == 1: 
+        if end_of_sentence == 1 and vocab_pos > 10: 
             dots_index.append(vocab_pos + 0.5)
             end_of_sentence = 0            
         unknown_previous = 0
@@ -149,7 +149,7 @@ k = 0
 for i in range(0,len(test_data)-10, 1):
     
     # if next_word is the beginning of new sentence, skip
-    if i+9 < dots_index[j] and i+10 > dots_index[j]: 
+    if i+9 < dots_index[j] and i+10 > dots_index[j] and j < len(dots_index)-1: 
         j += 1
         continue
         
